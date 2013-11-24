@@ -19,14 +19,11 @@ module.exports = function (paths) {
 				);
 
 				function processCssLintOutput(err, stdout) {
-					if(err){
-						return done(err);
-					}
-					return xml2js.parseString(stdout, function (err, result) {
+					return xml2js.parseString(stdout || "", function (err, result) {
 						if (err) {
 							return done(err);
 						}
-						var rawFilesWithProblems = result.lint.file;
+						var rawFilesWithProblems = result && result.lint && result.lint.file;
 						if (!rawFilesWithProblems) {
 							return done();
 						}
