@@ -1,0 +1,37 @@
+{
+  "author": "Allan Ebdrup",
+  "name": "mocha-csslint",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Muscula/mocha-csslint"
+  },
+  "private": false,
+  "main": "./index.js",
+  "dependencies": {
+    "csslint": "~0.10",
+    "xml2js": "~0.4.0"
+  },
+  "scripts": {
+    "test": "node ./test.js"
+  },
+  "devDependencies": {
+    "mocha": "",
+    "chai": "",
+    "sinon": "",
+    "sinon-chai": "",
+    "mocha-jshint": ""
+  },
+  "description": "mocha-csslint\r --------\r Run CSSLint as a Mocha test.",
+  "bugs": {
+    "url": "https://github.com/Muscula/mocha-csslint/issues"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [
+    "mocha",
+    "csslint"
+  ],
+  "license": "Apache2"
+}

@@ -1,0 +1,4 @@
+--format=compact
+--errors=errors,float,font-faces,fallback-colors,gradients,known-properties,shorthand
+#--ignore=box-sizing
+--warnings=

@@ -1,0 +1,8 @@
+@charset "UTF-8";
+.container {
+	width: 980px;
+	margin-left: auto;
+	margin-right: auto;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box
+}
