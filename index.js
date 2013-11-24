@@ -42,8 +42,6 @@ module.exports = function (paths) {
 								return 'CSSLint ' + i.severity + ': ' + i.reason + '\nat (' + f.name + ':' + i.line + ':' + i.char + ')';
 							}).join('\n');
 						}).join('\n');
-						console.log(lintError.stack);
-						console.log(JSON.stringify(filesWithProblems, null, '\t'));
 						return done(lintError);
 					});
 				}
