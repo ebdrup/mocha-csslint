@@ -19,6 +19,9 @@ module.exports = function (paths) {
 				);
 
 				function processCssLintOutput(err, stdout) {
+					if (err) {
+						return done(err);
+					}
 					return xml2js.parseString(stdout || "", function (err, result) {
 						if (err) {
 							return done(err);
