@@ -13,7 +13,7 @@ module.exports = function (paths) {
 			it("lints without errors", function (done) {
 				return execFile(
 					'node',
-					[path.join(__dirname, 'node_modules/csslint/cli.js'), '--format=lint-xml', path.resolve(p)],
+					[path.join(require.resolve('csslint'), '../../cli.js'), '--format=lint-xml', path.resolve(p)],
 					{ maxBuffer: 524288 },
 					processCssLintOutput
 				);
