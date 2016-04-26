@@ -1,4 +1,4 @@
-mocha-csslint [![Build Status](https://travis-ci.org/eagleeye/mocha-csslint.png)](https://travis-ci.org/eagleeye/mocha-csslint)
+mocha-csslint [![Build Status](https://travis-ci.org/eagleeye/mocha-csslint.svg)](https://travis-ci.org/eagleeye/mocha-csslint)
 -------------
 
 Run CSSLint as Mocha tests.
