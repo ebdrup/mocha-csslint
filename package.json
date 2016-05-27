@@ -9,18 +9,18 @@
   "private": false,
   "main": "./index.js",
   "dependencies": {
-    "csslint": "~0.10",
-    "xml2js": "~0.4.0"
+    "csslint": "0.10.0",
+    "xml2js": "0.4.12"
   },
   "scripts": {
     "test": "node ./test.js"
   },
   "devDependencies": {
-    "mocha": "",
-    "chai": "",
-    "sinon": "",
-    "sinon-chai": "",
-    "mocha-jshint": ""
+    "mocha": "2.3.3",
+    "chai": "3.3.0",
+    "sinon": "1.17.1",
+    "sinon-chai": "2.8.0",
+    "mocha-jshint": "2.2.3"
   },
   "description": "mocha-csslint\r --------\r Run CSSLint as a Mocha test.",
   "bugs": {
