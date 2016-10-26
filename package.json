@@ -9,7 +9,7 @@
   "private": false,
   "main": "./index.js",
   "dependencies": {
-    "csslint": "~0.10",
+    "csslint": "~1.0.4",
     "xml2js": "~0.4.0"
   },
   "scripts": {
