@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "mocha": "",
-    "chai": "",
+    "chai": "4.0.0",
     "sinon": "",
     "sinon-chai": "",
     "mocha-jshint": ""
