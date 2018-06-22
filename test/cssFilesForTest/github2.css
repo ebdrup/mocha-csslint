@@ -1,8 +1,8 @@
 @charset "UTF-8";
 .container {
-	width: 980px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 	margin-left: auto;
 	margin-right: auto;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box
+	width: 980px;
 }

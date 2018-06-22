@@ -1,14 +1,14 @@
-mocha-csslint [![Build Status](https://travis-ci.org/eagleeye/mocha-csslint.svg)](https://travis-ci.org/eagleeye/mocha-csslint)
+mocha-csslint [![npm version](https://badge.fury.io/js/mocha-csslint.svg)](https://badge.fury.io/js/mocha-csslint) [![Build Status](https://travis-ci.org/eagleeye/mocha-csslint.svg)](https://travis-ci.org/eagleeye/mocha-csslint)
 -------------
 
 Run CSSLint as Mocha tests.
 
 To install in your node.js project as devDependency, run this command, in the root of your project
 ```
-npm install mocha-csslint --save-dev
+npm install mocha-csslint --save-dev --save-exact
 ```
 
-usage
+Usage
 -----
 Mocha defaults to looking for your test specs in the `test` folder of your project.
 Add this file as `test/csslint.spec.js` in your project, with the following content:

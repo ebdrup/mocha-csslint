@@ -1,36 +1,38 @@
 /* global it, describe */
-var path = require('path');
-var execFile = require('child_process').execFile;
-var xml2js = require('xml2js');
+const path = require('path');
+const execFile = require('child_process').execFile;
+const xml2js = require('xml2js');
 
 module.exports = function (paths) {
-	if(typeof paths === 'string'){
+	if (typeof paths === 'string'){
 		paths = [paths];
 	}
 	paths = paths || ['.'];
 	paths.forEach(function (p) {
 		describe('csslint of ' + (p === '.' ? 'working directory' : p), function () {
-			it("lints without errors", function (done) {
+			it('lints without errors', function (done) {
 				return execFile(
 					'node',
-					[path.join(require.resolve('csslint'), '../../cli.js'), '--format=lint-xml', path.resolve(p)],
+					[path.join(require.resolve('csslint'), '../../dist/cli.js'), '--format=lint-xml', path.resolve(p)],
 					{ maxBuffer: 524288 },
 					processCssLintOutput
 				);
 
-				function processCssLintOutput(err, stdout) {
+				function processCssLintOutput(err, stdout, stderr) {
 					if (err) {
+						err.stdout = stdout;
+						err.stderr = stderr;
 						return done(err);
 					}
-					return xml2js.parseString(stdout || "", function (err, result) {
+					return xml2js.parseString(stdout || '', function (err, result) {
 						if (err) {
 							return done(err);
 						}
-						var rawFilesWithProblems = result && result.lint && result.lint.file;
+						const rawFilesWithProblems = result && result.lint && result.lint.file;
 						if (!rawFilesWithProblems) {
 							return done();
 						}
-						var filesWithProblems = rawFilesWithProblems.map(function (f) {
+						const filesWithProblems = rawFilesWithProblems.map(function (f) {
 							return {
 								name: f.$.name,
 								issues: f.issue.map(function (i) {
@@ -38,7 +40,7 @@ module.exports = function (paths) {
 								})
 							};
 						});
-						var lintError = new Error('');
+						const lintError = new Error('');
 						lintError.message = 'CSSLint failure';
 						lintError.stack = filesWithProblems.map(function (f) {
 							return f.issues.map(function (i) {
